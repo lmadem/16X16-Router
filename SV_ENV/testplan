@@ -1,0 +1,34 @@
+//This testplan is to verify the 16X16 Router functionality.
+
+//**********************************************************************************************************
+//BaseTest : The purpose of this test is to test the fundamental functionality of the design. This base_test will be extended to create various testcases in the environment
+
+//TestCase1: The purpose of this testcase1 is to implement 100% functional coverage through constrained random stimulus
+
+//Here the cover points are simple. coverpoint sa has 16 bins, coverpoint da has 16 bins since the design can support 16 source ports and 16 destination ports; cross sa, da; It covers 256 possible cases
+
+
+//**********************************************************************************************************
+
+
+//TestCase2: The test is to send the stimulus to a single destination port
+
+//Example : Sa* -> Da5
+
+//**********************************************************************************************************
+
+//TestCase3: The test is to send the stimulus packets of equal sizes by fixing the payload size
+
+//**********************************************************************************************************
+
+
+//TestCase4: The test is to send the stimulus packets of variable-sizes and hit the coverage
+
+
+//**********************************************************************************************************
+
+
+//TestCase5 : The test is to send the stimulus from SA0 -> DA0, SA1 -> DA1, SA2 -> DA2, SA3 -> DA3, and SA4 -> DA4 parallely and so on
+
+//**********************************************************************************************************
+
