@@ -89,19 +89,12 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
   #### EDA Playground Link
 
   ```bash
-https://www.edaplayground.com/x/Miur
+https://www.edaplayground.com/x/BrCy
   ```
 
   ```bash
-https://www.edaplayground.com/x/LyEi
+https://www.edaplayground.com/x/Rjws
   ```
-
-
-  #### Verification Standards
-
-  <li>SV : Constrained random stimulus, robust generator, multiple drivers, multiple monitors, out-of-order scoreboard, coverage component and environment </li>
-
-  <li>UVM : Factory override mechanisms, UVM callbacks, and In-line constraints </li>
 
   
 </details>
