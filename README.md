@@ -58,7 +58,8 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   #### Test Plan
 
-  ![image](https://github.com/lmadem/4X4-Router/assets/93139766/9c468ab8-d5bf-42e0-affd-741b93cbb33a)
+![image](https://github.com/user-attachments/assets/d032e8e0-7152-46d7-9fe8-c67594630e9c)
+
 
 
 </details>
