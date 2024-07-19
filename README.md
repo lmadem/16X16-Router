@@ -45,11 +45,6 @@ Verification of 4X4 router in System Verilog & UVM. The main intension of this r
   <li> After de-asserting reset_n, wait for 15 clocks before sending a packet through the router </li>
   <li> During these 15 clock cycles, the router is performing self-initialization. Attempting to drive a packet through the router during this time, the self-initialization will fail and the router will not work correctly afterwards </li>
 
-  
-  #### I/O Pins
-
-  ![image](https://github.com/lmadem/4X4-Router/assets/93139766/9e6a135e-fd50-4c93-9222-af9b49fcc1f8)
-
   <li> Please look into the "design.sv" file for further information </li>
   
 </details>
