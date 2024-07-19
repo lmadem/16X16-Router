@@ -1,5 +1,5 @@
 # 16X16 Router
-Verification of 4X4 router in System Verilog & UVM. The main intension of this repository is to document the verification plan and test case implementation in System Verilog & UVM testbench environment.
+Verification of 16X16 router in System Verilog & UVM. The main intension of this repository is to document the verification plan and test case implementation in System Verilog & UVM testbench environment.
 
 <details>
   <summary> Defining the black box design of Router 16X16 </summary>
@@ -54,7 +54,7 @@ Verification of 4X4 router in System Verilog & UVM. The main intension of this r
 
   #### The verification plan for Router 4X4 
 
-  <li> The idea is to build a robust verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, covering corner cases, erroneous cases, and error-injection checks</li>
+  <li> The idea is to build a robust verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, and covering corner cases</li>
 
   #### Test Plan
 
