@@ -20,34 +20,37 @@ Verification of 4X4 router in System Verilog & UVM. The main intension of this r
 
   #### Input Packet Format
 
-  
+  ![WhatsApp Image 2024-07-18 at 20 23 50](https://github.com/user-attachments/assets/dc2a4af6-20b2-40ed-abfe-de854f033de5)
 
   <li> RTL(router) accepts 1-bit per clock </li>
   <li> frame_n : falling edge indicates first bit of packet, rising edge indicates last bit of packet </li>
   <li> valid_n : valid_n is low if payload bit is valid, otherwise high </li>  
   <li> din : Header (destination address & padding bits) and payload </li>
-  
+
+  <li> The first four bits in the packet are address bits, and the next five bits are padding bits, followed by the payload bits </li>
+
+  #### Output Packet Format
+
+  ![WhatsApp Image 2024-07-18 at 20 28 25](https://github.com/user-attachments/assets/2ec6c01f-f597-4d72-866e-87d737018fac)
+
+  <li> Output activity is indicated by frameo_n, valido_n and dout </li>
+  <li> dout is valid only when frameo_n output is low(expect for last bit) & valid_n output is low </li>
+
+  #### Reset Signal
+
+  ![WhatsApp Image 2024-07-18 at 20 34 17](https://github.com/user-attachments/assets/d88cdc59-0ee5-4aa8-8f2b-184c67d8c957)
+
+  <li> While asserting reset_n, frame_n and valid_n must be de-asserted </li>
+  <li> reset_n is asserted for atleast one clock cycle </li>
+  <li> After de-asserting reset_n, wait for 15 clocks before sending a packet through the router </li>
+  <li> During these 15 clock cycles, the router is performing self-initialization. Attempting to drive a packet through the router during this time, the self-initialization will fail and the router will not work correctly afterwards </li>
+
   
   #### I/O Pins
 
   ![image](https://github.com/lmadem/4X4-Router/assets/93139766/9e6a135e-fd50-4c93-9222-af9b49fcc1f8)
 
-
-  #### pins to access Control Registers
-
-  ![image](https://github.com/lmadem/1X1-Router-/assets/93139766/85085177-f3a3-4f23-b4f1-3c7958c807b9)
-
-  #### Control Registers
-  
-  ![image](https://github.com/lmadem/1X1-Router-/assets/93139766/c2dda49e-ffbf-4f2b-9a99-243d69e2078d)
-
-
-  #### Status Registers
-
-  ![image](https://github.com/lmadem/4X4-Router/assets/93139766/0693cf5e-54d7-40f9-a6c7-955a65264756)
-
-  <li> Apart from the above mentioned status registers, the DUT has other status registers. Please look into the "router.sv" file for further information </li>
-  <li> This router 4X4 is designed in system verilog </li>
+  <li> Please look into the "design.sv" file for further information </li>
   
 </details>
 
