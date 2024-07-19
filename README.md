@@ -86,12 +86,13 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 <details>
   <summary> EDA Playground Links </summary>
 
-  #### EDA Playground Link
+  #### SV Playground Link
 
   ```bash
 https://www.edaplayground.com/x/BrCy
   ```
-
+  #### UVM Full Environment Playground Link
+  
   ```bash
 https://www.edaplayground.com/x/Rjws
   ```
