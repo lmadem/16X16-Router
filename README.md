@@ -99,15 +99,4 @@ https://www.edaplayground.com/x/Rjws
   
 </details>
 
-<details>
-  <summary>Challenge</summary>
 
-#### The error-injection and erroneous cases 
-<li> The simulation environment is hanging and going into a forever loop. It is because the run() task of driver, imonitor and omonitor components run forever, the output monitor block will end up in a forever loop when the stimulus is error-injected or erroneous </li>
-<li> Here, the design has status registers and it became easy to test error-injection and erroneous testcases </li>
-<li> But in general, the mechanism to control the simulation environment in an organized way even for error-injection and erroneous cases are bit tricky</li>
-<li> The solution would be using UVM, as it has objections and timeouts </li>
-<li> Reference link for the above problem : https://verificationacademy.com/forums/t/how-to-stop-a-simulation-in-a-controlled-way/35064 </li>
-
-
-</details>
