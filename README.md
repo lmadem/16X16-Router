@@ -52,13 +52,13 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 <details>
   <summary> Verification Plan </summary>
 
-  #### The verification plan for Router 4X4 
+  #### The verification plan for Router 16X16 
 
   <li> The idea is to build a robust verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, and covering corner cases</li>
 
   #### Test Plan
 
-![image](https://github.com/user-attachments/assets/d032e8e0-7152-46d7-9fe8-c67594630e9c)
+ ![image](https://github.com/user-attachments/assets/d032e8e0-7152-46d7-9fe8-c67594630e9c)
 
 
 
@@ -67,13 +67,14 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 <details>
   <summary> Verification Results </summary>
 
-   <li> Built a robust verification environment in System Verilog & UVM and implemented all the testcases as per the testplan. The SV testbench verification environment consists of header class, packet class, generator class, multiple drivers, multiple monitors, and scoreboard class, environment class, base_test class, test classes, program block, top module, interface and the design </li>
-   <li> THE UVM verification environment consists of transaction class, sequences, sequencer, multiple master agents, multiple slave agents, scoreboard, coverage component, environment and test components</li>
+   <li> Built a robust verification environment in System Verilog & UVM and implemented all the testcases as per the testplan. The SV testbench verification environment consists of  packet class, generator class, multiple drivers, multiple monitors, and scoreboard class, multistream scoreboard, environment class, base_test class, test classes, program block, top module, interface and the design </li>
+   <li> THE UVM verification environment consists of transaction class, sequences, sequencer, multiple agents(input, output, reset, and host), scoreboard, out-of-order-scoreboard, coverage component, environment and test components</li>
    <li> This environment will be able to drive one testcase per simulation </li>
 
    #### Test Plan Status
 
-   ![image](https://github.com/lmadem/4X4-Router/assets/93139766/f6f0d3ad-d63c-4dca-bdd0-048a99175c98)
+   ![image](https://github.com/user-attachments/assets/85200fd5-7654-4db4-94ca-26c25dd4917e)
+
    
 </details>
 
