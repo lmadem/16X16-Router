@@ -1,0 +1,49 @@
+//This testplan is to verify the 16X16 Router functionality.
+
+//**********************************************************************************************************
+//BaseTest : The purpose of this test is to test the fundamental functionality of the design. This base_test will be extended to create various testcases in the environment - PASS
+
+//TestCase1: The purpose of this testcase1 is to implement 100% functional coverage through constrained random stimulus - PASS(To pass this case, it took around 105 Packets(each packet can drive to 16 Individual ports) which are equivalent to 1680 stimulus to hit 256 possible bins
+
+//There are 16 input ports and 16 output ports and here the cover points are simple. coverpoint sa has 16 bins, coverpoint da has 16 bins since the design can support 16 source ports and 16 destination ports; cross sa, da; It covers 256 possible cases
+
+
+//**********************************************************************************************************
+
+//TestCase2: Hit the 100% functional coverage for ports:{cross sa, da} with directed stimulus - PASS (it took 16 packets, which are equivalent to 256 stimulus to hit the coverage)
+
+//**********************************************************************************************************
+
+//TestCase3: The test is to send the stimulus to a single destination port without using a constraint - PASS
+
+//Example : Sa* -> Da7
+
+//**********************************************************************************************************
+
+//TestCase4: The test is to send the stimulus packets of equal sizes by fixing the payload size - PASS
+
+//**********************************************************************************************************
+
+
+//TestCase5: The test is to send the stimulus packets of variable-sizes - PASS
+
+
+//**********************************************************************************************************
+
+
+//TestCase6 : The test is to send the stimulus from ports SA0 -> DA0, SA1 -> DA1, SA2 -> DA2, SA3 -> DA3, and SA4 -> DA4 parallely and so on - PASS
+
+//**********************************************************************************************************
+
+//Additional testcase
+
+//TestCase7 : The test is to configure the DUT registers without the RAL environment. To proceed with this case, need to disable all the output ports in the design and see how the design is processing when the configuration signals are de-asserted. Also, verify the design functionality after configuring DUT registers from testbench environment - PASS
+
+
+//**********************************************************************************************************
+
+//Testcase8 : The test is to send the stimulus to a single destination port from a single source port
+
+//Example : Sa4 -> Da4
+
+//**********************************************************************************************************
