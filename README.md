@@ -8,9 +8,9 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
   
   <li> Note :: This DUT is not synthesizable, it is only designed for verification practices. The design has control & status registers </li>
 
-  <li> Input Ports : clk, reset, sa1, sa2, sa3, sa4, sa1_valid, sa2_valid, sa3_valid, sa4_valid </li>
+  <li> Input Ports : </li>
 
-  <li> Output Ports : da1, da2, da3, da4, da1_valid, da2_valid, da3_valid, da4_valid </li>
+  <li> Output Ports :  </li>
 
   #### Black Box Design
 
