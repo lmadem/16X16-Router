@@ -4,45 +4,37 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 <details>
   <summary> Defining the black box design of Router 16X16 </summary>
 
-  #### Router 16X16 is a switch, which can transfer a series of packets from source ports to the destination ports 
+  #### Router 16X16 a crosspoint switch, which can transfer a series of packets from source ports to the destination ports 
   
-  <li> Note :: This DUT is not synthesizable, it is only designed for verification practices. The design has control & status registers </li>
+  <li> The router has 16 input and 16 output ports. Each input and output port consists of 3 signals, serial data, frame and valid. These signals are represented in a bit-vector format, din[15:0], frame_n[15:0], valid_n[15:0], dout[15:0], frameo_n[15:0] and valido_n[ 15:0]. </li>
 
-  <li> Input Ports : </li>
+  <li> Input Ports : din, frame_n, valid_n, reset_n, clock /li>
 
-  <li> Output Ports :  </li>
+  <li> Output Ports : dout, frameo_n, valido_n </li>
+
+  <li> To drive an individual port, the specific bit position corresponding to the port number must be specified. For example, if input port 3 is to be driven, then the corresponding signals shall be din[3], frame_n[3] and valid_n[3] </li>
+
+  <li> To sample an individual port, the specific bit position corresponding to the port number must be specified. For example, if output port 7 is to be sampled, then the corresponding signals shall be dout[7], frameo_n[7] and valido_n[7  </li>
 
   #### Black Box Design
 
-  ![image](https://github.com/lmadem/4X4-Router/assets/93139766/b17d4f5a-5f71-459c-b057-f427bcd7fe37)
-
+  ![image](https://github.com/user-attachments/assets/4dd9dc04-49dd-4030-a631-05660817fe25)
 
   #### Packet Format
 
-  ![image](https://github.com/lmadem/1X1-Router-/assets/93139766/7fff2584-70f0-4da7-ac12-d0b45958d596)
-
-  <li> Minimum packet length is 12 bytes and max is 2000 bytes </li>
-  <li> RTL(router) accepts 8-bits per clock </li>
-  <li> inp_valid indicates start/end of packet at the source port </li>
-  <li> outp_valid indicates start/end of packet at the destination port </li>  
   
-  #### I/O Pins
 
-  ![image](https://github.com/lmadem/4X4-Router/assets/93139766/9e6a135e-fd50-4c93-9222-af9b49fcc1f8)
+  #### Input Packet Structure
+
+  ![image](https://github.com/user-attachments/assets/81e0ce6c-4f72-420a-b810-d54628edbbee)
+
+  #### Output Packet Structure
+
+  ![image](https://github.com/user-attachments/assets/a99e0e99-14d6-4da5-991e-79b4a0037163)
 
 
-  #### pins to access Control Registers
-
-  ![image](https://github.com/lmadem/1X1-Router-/assets/93139766/85085177-f3a3-4f23-b4f1-3c7958c807b9)
-
-  #### Control Registers
   
-  ![image](https://github.com/lmadem/1X1-Router-/assets/93139766/c2dda49e-ffbf-4f2b-9a99-243d69e2078d)
-
-
-  #### Status Registers
-
-  ![image](https://github.com/lmadem/4X4-Router/assets/93139766/0693cf5e-54d7-40f9-a6c7-955a65264756)
+  
 
   <li> Apart from the above mentioned status registers, the DUT has other status registers. Please look into the "router.sv" file for further information </li>
   <li> This router 4X4 is designed in system verilog </li>
