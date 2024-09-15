@@ -6,7 +6,7 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   #### Router 16X16 a crosspoint switch, which can transfer a series of packets from source ports to the destination ports 
   
-  <li> The router has 16 input and 16 output ports. Each input and output port consists of 3 signals, serial data, frame and valid. These signals are represented in a bit-vector format, din[15:0], frame_n[15:0], valid_n[15:0], dout[15:0], frameo_n[15:0] and valido_n[ 15:0]. </li>
+  <li> The router has 16 input and 16 output ports. Each input and output port consists of 3 signals, serial data, frame and valid. These signals are represented in a bit-vector format, din[15:0], frame_n[15:0], valid_n[15:0], dout[15:0], frameo_n[15:0] and valido_n[ 15:0] </li>
 
   <li> Input Ports : din, frame_n, valid_n, reset_n, clock /li>
 
