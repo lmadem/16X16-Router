@@ -102,22 +102,28 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 <details>
   <summary> EDA Playground Links </summary>
 
-  #### EDA Playground Link
+  #### UVM Full Environment Playground Link
 
   ```bash
-https://www.edaplayground.com/x/Miur
+https://www.edaplayground.com/x/BrCy
   ```
-
+ #### SV Playground Link
   ```bash
-https://www.edaplayground.com/x/LyEi
+https://www.edaplayground.com/x/Rjws
   ```
 
+#### UVM Layered testbench
+```bash
+LAB1 : https://www.edaplayground.com/x/Ryqm
+LAB2 : https://www.edaplayground.com/x/S_7w
+LAB3 : https://www.edaplayground.com/x/X5Ug
+LAB4 : https://www.edaplayground.com/x/Txtt
+LAB5 : https://www.edaplayground.com/x/rCiR
+LAB6 : https://www.edaplayground.com/x/FwWD
+LAB7 : https://www.edaplayground.com/x/MNif
 
-  #### Verification Standards
+```
 
-  <li>SV : Constrained random stimulus, robust generator, multiple drivers, multiple monitors, out-of-order scoreboard, coverage component and environment </li>
-
-  <li>UVM : Factory override mechanisms, UVM callbacks, and In-line constraints </li>
 
   
 </details>
