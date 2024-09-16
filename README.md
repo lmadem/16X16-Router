@@ -24,6 +24,11 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   <li> The packet driving mechanism should follow the certain requirements </li>
 
+  <li> While asserting reset_n, frame_n and valid_n must be de-asserted, reset_n is asserted for at least one clock cyle. After de-asserting reset_n, wait for 15 clocks
+before sending a packet through the router </li>
+
+  <li> During these 15 clock cycles, the router is performing self-initialization. If you attempt to drive a packet through the router during this time, the self-initialization will fail and the router will not work correctly afterwards.</li>
+
   <li> The first four bits should be the destination address, and the next five bits should be the padding bits(0/1), followed by payload bit data (payload is in bytes) </li>
 
   <li> While starting the packet, the frame_n should be de-asserted for the corresponding port and it should be asserted high before the last bit of payload data. This signal indicates the start and end of transaction </li>
