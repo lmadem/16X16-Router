@@ -83,13 +83,14 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 <details>
   <summary> Verification Results </summary>
 
-   <li> Built a robust verification environment in System Verilog & UVM and implemented all the testcases as per the testplan. The SV testbench verification environment consists of header class, packet class, generator class, multiple drivers, multiple monitors, and scoreboard class, environment class, base_test class, test classes, program block, top module, interface and the design </li>
-   <li> THE UVM verification environment consists of transaction class, sequences, sequencer, multiple master agents, multiple slave agents, scoreboard, coverage component, environment and test components</li>
+   <li> Built a robust verification environment in System Verilog & UVM and implemented all the testcases as per the testplan </li>
    <li> This environment will be able to drive one testcase per simulation </li>
 
    #### Test Plan Status
 
-   ![image](https://github.com/lmadem/4X4-Router/assets/93139766/f6f0d3ad-d63c-4dca-bdd0-048a99175c98)
+   ![image](https://github.com/user-attachments/assets/3febd31d-a4d1-4a03-91a5-0d9b33dd9ad3)
+
+
    
 </details>
 
