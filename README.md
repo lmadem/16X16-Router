@@ -22,7 +22,13 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   #### Packet Format
 
-  
+  <li> The packet driving mechanism should follow the certain requirements </li>
+
+  <li> The first four bits should be the destination address, and the next five bits should be the padding bits(0/1), followed by payload bit data (payload is in bytes) </li>
+
+  <li> While starting the packet, the frame_n should be de-asserted for the corresponding port and it should be asserted high before the last bit of payload data. This signal indicates the start and end of transaction </li>
+
+  <li> The valid_n should be deasserted when driving the payload data and it should be asserted high after completed the payload data bits. This signals indicates the valid payload data </li>
 
   #### Input Packet Structure
 
@@ -32,21 +38,19 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   ![image](https://github.com/user-attachments/assets/a99e0e99-14d6-4da5-991e-79b4a0037163)
 
-
+  #### Functional Perspective
   
-  
+  ![image](https://github.com/user-attachments/assets/97790623-6db2-4345-801e-de20c9641b84)
 
-  <li> Apart from the above mentioned status registers, the DUT has other status registers. Please look into the "router.sv" file for further information </li>
-  <li> This router 4X4 is designed in system verilog </li>
   
 </details>
 
 <details>
   <summary> Verification Plan </summary>
 
-  #### The verification plan for Router 4X4 
+  #### The verification plan for Router 16X16 
 
-  <li> The idea is to build a robust verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, covering corner cases, erroneous cases, and error-injection checks</li>
+  <li> The idea is to build a robust & re-usable verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, and covering various scenarios </li>
 
   #### Test Plan
 
@@ -96,17 +100,6 @@ https://www.edaplayground.com/x/LyEi
   
 </details>
 
-<details>
-  <summary>Challenge</summary>
 
-#### The error-injection and erroneous cases 
-<li> The simulation environment is hanging and going into a forever loop. It is because the run() task of driver, imonitor and omonitor components run forever, the output monitor block will end up in a forever loop when the stimulus is error-injected or erroneous </li>
-<li> Here, the design has status registers and it became easy to test error-injection and erroneous testcases </li>
-<li> But in general, the mechanism to control the simulation environment in an organized way even for error-injection and erroneous cases are bit tricky</li>
-<li> The solution would be using UVM, as it has objections and timeouts </li>
-<li> Reference link for the above problem : https://verificationacademy.com/forums/t/how-to-stop-a-simulation-in-a-controlled-way/35064 </li>
-
-
-</details>
 
 
