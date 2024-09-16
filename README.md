@@ -8,11 +8,11 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
   
   <li> The router has 16 input and 16 output ports. Each input and output port consists of 3 signals, serial data, frame and valid. These signals are represented in a bit-vector format, din[15:0], frame_n[15:0], valid_n[15:0], dout[15:0], frameo_n[15:0] and valido_n[ 15:0] </li>
 
-  <li> Input Ports : din, frame_n, valid_n, reset_n, clock </li>
+  #### Input Ports : din, frame_n, valid_n, reset_n, clock
 
-  <li> Clock : System Clock </li>
+  <li> clock : System Clock </li>
  
-  <li> reset_n : Asynchronous reset, active low </li>
+  <li> reset_n : Asynchronous reset, active low signal </li>
 
   <li> valid_n : 16-bit vector, active low signal. Indicates the valid payload data in the transaction </li>
 
@@ -20,7 +20,7 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   <li> din : 16-bit vector, indicates serial input data </li>
 
-  <li> Output Ports : dout, frameo_n, valido_n </li>
+  #### Output Ports : dout, frameo_n, valido_n
 
   <li> dout : 16-bit vector, indicates serial output data </li>
 
@@ -40,16 +40,15 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   <li> The packet driving mechanism should follow the certain requirements </li>
 
-  <li> While asserting reset_n, frame_n and valid_n must be de-asserted, reset_n is asserted for at least one clock cyle. After de-asserting reset_n, wait for 15 clocks
-before sending a packet through the router </li>
+  <li> While asserting reset_n, frame_n and valid_n must be driven high, reset_n is asserted low for at least one clock cyle. After de-asserting reset_n, wait for 15 clocks before sending a packet through the router </li>
 
   <li> During these 15 clock cycles, the router is performing self-initialization. If you attempt to drive a packet through the router during this time, the self-initialization will fail and the router will not work correctly afterwards.</li>
 
   <li> The first four bits should be the destination address, and the next five bits should be the padding bits(0/1), followed by payload bit data (payload is in bytes) </li>
 
-  <li> While starting the packet, the frame_n should be de-asserted for the corresponding port and it should be asserted high before the last bit of payload data. This signal indicates the start and end of transaction </li>
+  <li> While starting the packet, the frame_n should be driven low for the corresponding port and it should be asserted high before the last bit of payload data. This signal indicates the start and end of transaction </li>
 
-  <li> The valid_n should be deasserted when driving the payload data and it should be asserted high after completed the payload data bits. This signals indicates the valid payload data </li>
+  <li> The valid_n should be asserted low when driving the payload data and it should be asserted high after completing the payload data bits. This signals indicates the valid payload data </li>
 
   #### Input Packet Structure
 
