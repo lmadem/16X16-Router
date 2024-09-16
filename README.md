@@ -14,7 +14,7 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   <li> To drive an individual port, the specific bit position corresponding to the port number must be specified. For example, if input port 3 is to be driven, then the corresponding signals shall be din[3], frame_n[3] and valid_n[3] </li>
 
-  <li> To sample an individual port, the specific bit position corresponding to the port number must be specified. For example, if output port 7 is to be sampled, then the corresponding signals shall be dout[7], frameo_n[7] and valido_n[7  </li>
+  <li> To sample an individual port, the specific bit position corresponding to the port number must be specified. For example, if output port 7 is to be sampled, then the corresponding signals shall be dout[7], frameo_n[7] and valido_n[7]  </li>
 
   #### Black Box Design
 
@@ -50,7 +50,7 @@ Verification of 16X16 router in System Verilog & UVM. The main intension of this
 
   #### The verification plan for Router 16X16 
 
-  <li> The idea is to build a robust & re-usable verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, and covering various scenarios </li>
+  <li> The idea is to build a robust & re-usable verification environment in system verilog & UVM which can handle various testcases. The testcases has basic functionality checks, functional coverage hits, and covering various test scenarios </li>
 
   #### Test Plan
 
